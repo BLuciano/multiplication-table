@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <table ng-controller="MultiplicationCtrl">
-      <tr ng-repeat="numberA in numbers">
-        <td ng-repeat="numberB in numbers">
-          {{ numberA * numberB }}
+    <table ng-controller="MultiplicationCtrl" initial-number-limit='10'>
+      <tr ng-repeat="numberA in numbers()">
+        <td ng-repeat="numberB in numbers()">
+          {{ compute(numberA, numberB) }}
         </td>
       </tr>
     </table>
