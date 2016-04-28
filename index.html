@@ -7,13 +7,16 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <table ng-controller="MultiplicationCtrl" initial-number-limit='10'>
-      <tr ng-repeat="numberA in numbers()">
-        <td ng-repeat="numberB in numbers()">
-          {{ compute(numberA, numberB) }}
-        </td>
-      </tr>
-    </table>
+    <div ng-controller="MultiplicationCtrl" initial-number-limit='10'>
+      <input type="number" class="numbrInput" ng-model="numberLimit" placeholder="Enter a number"/>  
+      <table>
+        <tr ng-repeat="numberA in numbers()">
+          <td ng-repeat="numberB in numbers()">
+            {{ compute(numberA, numberB) }}
+          </td>
+        </tr>
+      </table>
+    </div>
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
